@@ -19,6 +19,6 @@ public class Compte {
     String adress;
     String detail;
 
-
-
+    public Compte(int num, String adress, String detail) {
+    }
 }

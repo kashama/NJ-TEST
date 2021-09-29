@@ -16,7 +16,9 @@ public class Operation {
     private @Id
     @GeneratedValue
     long id;
-    Date date;
+    int date;
     String detail;
 
+    public Operation(int date, String detail) {
+    }
 }

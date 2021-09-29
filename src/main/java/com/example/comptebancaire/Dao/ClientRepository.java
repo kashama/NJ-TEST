@@ -17,6 +17,4 @@ import java.util.Map;
 @Repository
 
 public interface  ClientRepository extends JpaRepository<Client, Long> {
-    public Map<String,String> aficherinfo(String adress, String detail, int num);
-
 }

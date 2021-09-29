@@ -8,7 +8,5 @@ import java.util.Map;
 
 public interface CompteRepository extends JpaRepository<Compte, Long> {
 
-    public Map<String,String> aficherRelever(String adress, String detail, int num);
-
 
 }
