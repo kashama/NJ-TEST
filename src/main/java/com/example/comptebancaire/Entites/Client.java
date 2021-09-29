@@ -13,6 +13,7 @@ import javax.persistence.Id;
 @RequiredArgsConstructor
 @Getter
 @Setter
+
 public class Client {
     private @Id
     @GeneratedValue
@@ -24,4 +25,6 @@ public class Client {
     private String adress;
     private int numIdentBanque;
 
+    public Client(String nom, String  prenom, int numTelephone, int age, String adress, int numIdentBanque) {
+    }
 }

@@ -1,11 +1,8 @@
 package com.example.comptebancaire.Controller;
 
-import com.example.comptebancaire.Dao.ClientRepository;
 import com.example.comptebancaire.Entites.Client;
-import com.example.comptebancaire.Exception.ClientNotFoundException;
 import com.example.comptebancaire.Service.ClientService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 
@@ -16,22 +13,22 @@ public class ClientController {
         this.clientService = clientService;
     }
 
-    @GetMapping("/clients")
+    @GetMapping(value="/clients")
     List<Client> all() {
         return clientService.getClients();
     }
 
-    @GetMapping("/clients/{id}")
+    @GetMapping(value="/clients/{id}")
     Client getClient(@PathVariable Long id) {
         return clientService.getClient(id);
     }
 
-    @PostMapping("/clients")
+    @PostMapping(value="/clients")
     Client newClient(@RequestBody Client newClient) {
         return clientService.createClient(newClient);
     }
 
-    @DeleteMapping("/clients/{id}")
+    @DeleteMapping(value="/clients/{id}")
     void deleteClient(@PathVariable Long id) {
         clientService.deleteClient(id);
     }
